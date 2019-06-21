@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Type writer</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="main_header">
+     <h1 class="title">Type writer</h1> 
+     <div class="buttons">
+       <a class = "button" href="">Signin</a>
+       <a class = "button" href="/articles/new">Write</a>
+       <a class = "button" href="">Signout</a>
+     </div>
+    </header>
+  <div class="main">
+  </div>
+
+   <%= yield %>
+
+    <div class="main">
+  </div>
+
+
+ <!-- fotterは趣味のキーボードを作っているだけだ。面倒臭いぞ！ -->
+
+<div class="main_footer">
+ <ul class = "key_list">
+  <li>
+    <div class="key_1">
+      <p id ="q" class = "key" href="">Q</p>
+      <p id ="w" class = "key" href="">W</p>
+      <p id ="e" class = "key" href="">E</p>
+      <p id ="r" class = "key" href="">R</p>
+      <p id ="t" class = "key" href="">T</p>
+      <p id ="y" class = "key" href="">Y</p>
+      <p id ="u" class = "key" href="">U</p>
+      <p id ="i" class = "key" href="">I</p>
+      <p id ="o" class = "key" href="">O</p>
+      <p id ="p" class = "key" href="">P</p>
+    </div>
+  </li>
+  <li>
+    <div class="key_2">
+      <p id ="a" class = "key" href="">A</p>
+      <p id ="s" class = "key" href="">S</p>
+      <p id ="d" class = "key" href="">D</p>
+      <p id ="f" class = "key" href="">F</p>
+      <p id ="g" class = "key" href="">G</p>
+      <p id ="h" class = "key" href="">H</p>
+      <p id ="j" class = "key" href="">J</p>
+      <p id ="k" class = "key" href="">K</p>
+      <p id ="l" class = "key" href="">L</p>
+    </div>
+  </li>
+  <li>
+    <div class="key_3">
+      <p id ="z" class = "key" href="">Z</p>
+      <p id ="x" class = "key" href="">X</p>
+      <p id ="c" class = "key" href="">C</p>
+      <p id ="v" class = "key" href="">V</p>
+      <p id ="b" class = "key" href="">B</p>
+      <p id ="n" class = "key" href="">N</p>
+      <p id ="m" class = "key" href="">M</p>
+    </div> 
+  </li>
+ </ul>
+</div>
+
+
+
+
+
+  </body>
+</html>

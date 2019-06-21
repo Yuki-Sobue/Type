@@ -1,0 +1,14 @@
+
+<%@articles.each do |article|%>
+  <div class="article">
+    <div class="text_box">
+      <div class="button_list">
+        <a class = "button" href="/articles/<%=article[:id]%>">detail</a>
+        <a class = "button" href="">rewrite</a>
+        <a class = "button" href="">trush</a>
+        <h1 class="article_title"><%=article.title%><h1>
+      </div>
+    </div>
+  </div>
+<%end%>
+

@@ -1,0 +1,207 @@
+*{font-family: fantasy;
+  margin: 0%
+}
+.main_header{
+  background-color:gray;
+  height: 80px;
+  width:100%;
+  padding-left: 15px;
+  position: fixed;
+  box-shadow:0px 3px 0px #627295;
+}
+
+.title{
+  font-family: monospace;
+  color:white;
+   font-size:20px;
+   font-weight:bold;
+   text-shadow: 1px 1px 0px gray, 3px 3px 0px black;
+}
+
+.main{
+  padding-top:80px;
+}
+
+.article{
+  margin: 0% auto;
+  height:120px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+
+.text_box{
+  margin: 10px;
+  width: 300px;
+  height:100px;
+  margin-top: 5px;
+  margin: 0% auto;
+  background-color:white;
+  border-radius: 10px;
+  padding: 10px;
+  border-radius: 2px;
+  border-color: black;
+  border:2px #627295;
+  border-style: solid;
+}
+
+
+.article_title{
+  font-family: fantasy;
+  margin:0 auto;
+  color:black;
+  font-size:20px;
+  font-weight:bold;
+  text-shadow: 1px 1px 0px gray, 2px 2px 0px darkgray;
+}
+
+.button_list{
+  width: 100%;
+  margin: 0% auto;
+  box-sizing: border-box;
+}
+
+.main_footer{
+  box-sizing: border-box;
+  padding: 5px;
+  background-color:gray;
+  height: 80px;
+  width: 100%;
+  padding-left: 15px;
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  position: fixed;
+  box-shadow:0px 15px 15px #627295;
+ }
+
+.form{
+   display: block;
+   width:  400px;
+   height: 400px;
+   margin: 0% auto;
+ }
+
+.title_form{
+  margin: 10px;
+  width: 400px;
+  box-sizing: border-box;
+  height:20px;
+  margin-top: 5px;
+  margin: 0% auto;
+  background-color:palegoldenrod;
+  border-radius: 10px;
+  border-color: darkslategrey;
+}
+
+.text_form{
+  margin: 10px;
+  width: 400px;
+  height:200px;
+  margin-top: 5px;
+  margin: 0% auto;
+  background-color:palegoldenrod;
+  border-radius: 10px;
+  padding: 10px;
+  border-color: darkslategrey;
+  display: block;
+  box-sizing: border-box;
+}
+
+
+
+/* ここからがボタンのアクションの記述になります */
+.buttons{
+  position: absolute;
+  right:30px;
+  top: 18px;
+  line-height: 30px;
+}
+
+.button {
+  margin: 5px;
+  font-size: 1rem;
+  width: 60px;
+  display: inline-block;
+  height: 10px;
+  text-align: center;
+  line-height: 15px;
+  display: inline-block;
+  padding: 0.4em 0.3em;
+  text-decoration: none;
+  background:green;
+  color:ivory;
+  border-bottom: solid 4px #627295;
+  border-radius: 10px;
+}
+.button:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  background:azure;
+  color:black;
+  border-bottom: none;
+}
+
+.submit_button{
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+  width: 400px;
+  display: inline-block;
+  height: 30px;
+  box-sizing: border-box;
+  margin: 0% auto;
+  line-height: 20px;
+  display: inline-block;
+  text-decoration: none;
+  background:red;
+  color:ivory;
+  border-bottom: solid 4px #627295;
+  border-radius: 10px;
+}
+
+.submit_button:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  background:azure;
+  color:black;
+  border-bottom: none;
+}
+
+.text_detail{
+  width: 80%;
+  margin: 0% auto;
+}
+
+
+.key_list{
+  list-style: none;
+  margin: 0% auto;
+}
+
+.key {
+  margin: 0 auto;
+  font-size: 0.5rem;
+  width: 20px;
+  display: inline-block;
+  height: 8px;
+  text-align: center;
+  display: inline-block;
+  padding: 0.5em 0.3em;
+  text-decoration: none;
+  background:black;/*ボタン色*/
+  color:ivory;
+  border-bottom: solid 2px #627295;
+  border-radius: 5px;
+}
+.key:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  background:red;
+  color:white;
+  border-bottom: none;
+}
