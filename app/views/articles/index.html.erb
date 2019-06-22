@@ -1,11 +1,10 @@
-
 <%@articles.each do |article|%>
   <div class="article">
     <div class="text_box">
       <div class="button_list">
-        <a class = "button" href="/articles/<%=article[:id]%>">detail</a>
-        <a class = "button" href="">rewrite</a>
-        <a class = "button" href="">trush</a>
+        <%=link_to 'detail', "/articles/#{article.id}",class: "button"%>
+        <%=link_to 'rewrite', "/articles/#{article.id}/edit", method: :get ,class: "button"%>
+        <%=link_to 'trush', "/articles/#{article.id}", method: :delete ,class: "button"%>
         <h1 class="article_title"><%=article.title%><h1>
       </div>
     </div>

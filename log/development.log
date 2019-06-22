@@ -4659,3 +4659,2180 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for ::1 at 2019-06-22 08:58:00 +0900
+  [1m[35m (49.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sobueyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/sobueyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (40.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (52.7ms)
+Completed 200 OK in 308ms (Views: 252.0ms | ActiveRecord: 45.1ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 08:58:06 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 29ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/20" for ::1 at 2019-06-22 08:58:07 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 20 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 19.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 08:58:10 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 26.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/18" for ::1 at 2019-06-22 08:58:11 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 18 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 19.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/1" for ::1 at 2019-06-22 08:58:15 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 08:58:19 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 08:58:20 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (0.8ms)
+  Rendered articles/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2019-06-22 08:58:21 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9WBWiV0C+rMgu5AEZlu2BZxobPXGCyEOUStx+B19erFcVeTRIPQflgtmzuf6FA9n1Wodtb9XhwJUtaZsxu5tsw==", "title"=>"", "text"=>""}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (44.6ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `text`, `created_at`, `updated_at`) VALUES ('', '', '2019-06-21 23:58:21', '2019-06-21 23:58:21')[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 302 Found in 51ms (ActiveRecord: 46.7ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 08:58:21 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:19:30 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sobueyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/sobueyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (51.6ms)
+Completed 200 OK in 245ms (Views: 190.3ms | ActiveRecord: 43.3ms)
+
+
+Started GET "/articles/18/destroy" for ::1 at 2019-06-22 09:19:32 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/articles/18/destroy"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-06-22 09:22:13 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/1" for ::1 at 2019-06-22 09:22:16 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 32ms (Views: 19.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/18/destroy" for ::1 at 2019-06-22 09:24:07 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/articles/18/destroy"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/articles" for ::1 at 2019-06-22 09:24:18 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (3.9ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 51ms (Views: 42.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/articles/18" for ::1 at 2019-06-22 09:24:22 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 18 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 20.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/18" for ::1 at 2019-06-22 09:24:34 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 18 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for ::1 at 2019-06-22 09:24:37 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (5.1ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 49ms (Views: 39.6ms | ActiveRecord: 5.1ms)
+
+
+Started DELETE "/articles/18" for ::1 at 2019-06-22 09:24:39 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"arZPqGG7llOQr/dNdrZCAWLL698msAiwVAliVKwsSRygTwv6cVNCherpxUbhCLLNNnDhsKTiHcDC6AmnHpRZOg==", "id"=>"18"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:24:39 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/18" for ::1 at 2019-06-22 09:24:41 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fUQz4SKHbR0xmPmMeMWaqW4+ll1Bn1HmJsIVqGS+xFC3vXezMm+5y0vey4fve2plOoWcMsPNRJawI35b1gbUdg==", "id"=>"18"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:24:41 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/18" for ::1 at 2019-06-22 09:24:41 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EGBdkSNb5hVWumxnhSt2m7zgttlY8XPTxw20qviTQf3amRnDM7Mywyz8XmwSlYZX6Fu8ttqjZqNR7N9ZSitR2w==", "id"=>"18"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:24:41 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/articles/18" for ::1 at 2019-06-22 09:24:41 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wZQ2sgI4LwJt4zVF727h2udQykrs1UjI0x4k5I++BaULbXLgEtD71BelB0540BEWs+vAJW6HXbhF/08XPQYVgw==", "id"=>"18"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:24:41 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/18" for ::1 at 2019-06-22 09:24:42 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lj7IVgIF0vYE/n+2mFXvzqIWr1GfvICGLCNc5SYF/opcx4wEEu0GIH64Tb0P6x8C9q2lPh3ulfa6wjcWlL3urA==", "id"=>"18"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:24:42 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/18" for ::1 at 2019-06-22 09:24:42 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/E/4pWNw9jy+Kkw0fpoQT2XFbpQR2i6b6tGC9VCVoLw2trz3c5gi6sRsfj/pJOCDMX5k+5OIO+t8MOkG4i2wmg==", "id"=>"18"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:24:42 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:25:29 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/1" for ::1 at 2019-06-22 09:25:30 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dkAu7aJsFTEZtYkONh6BTdiG3fN7kRGrOu7e5YCRvIi8uWq/soTB52PzuwWhoHGBjD3XnPnDBNusD7UWMimsrg==", "id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:25:30 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/18" for ::1 at 2019-06-22 09:25:31 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0skwLBgftSiz/OQ/z1rEk9hCMZwe1p9fdU6YN8OWJl4YMHR+CPdh/sm61jRY5DRfjPk785yEii/jr/PEcS42eA==", "id"=>"18"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:25:31 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/19" for ::1 at 2019-06-22 09:25:32 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xsPd073Tse4AAVyMoWMBEsyhrXF4Cw1jxaQHNJI3cN0MOpmBrTtlOHpHboc23fHemBqnHvpZGBNTRWzHII9g+w==", "id"=>"19"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:25:32 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/20" for ::1 at 2019-06-22 09:25:34 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ER79vfiLKdD/qOfFGz+pd3/Ti0G0OR/FdPIqfAMTIp/b57nv6GP9BoXu1c6MgVm7K2iBLjZrCrXiE0GPsasyuQ==", "id"=>"20"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:25:34 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:28:14 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/24" for ::1 at 2019-06-22 09:28:15 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Q/J49Y3/Oq2uRrxm4JCOPY5h2XPNS8mO3dDIO591lGKJCzynnRfue9QAjm13Ln7x2trTHE8Z3P5LMaPILc2ERA==", "id"=>"24"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:28:15 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/18" for ::1 at 2019-06-22 09:28:17 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"S3QIxrx3mMKOLrtLrcJ+bIp8eXhNDKnQKdoVEv33ftyBjUyUrJ9MFPRoiUA6fI6g3sdzF89evKC/O37hT09u+g==", "id"=>"18"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:28:17 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/18" for ::1 at 2019-06-22 09:28:18 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7VrQZe5u6ITfjZgll39iUXrnZfaaDjXqlnYGM4tDrA4no5Q3/oY8UqXLqi4AwZKdLlxvmRhcIJoAl23AOfu8KA==", "id"=>"18"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:28:18 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/articles/18" for ::1 at 2019-06-22 09:28:19 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NTBNs3YyHor/O3hyIEyYgJ0kgqNq4CUI+4tNAX5KPQb/yQnhZtrKXIV9Snm38mhMyZ+IzOiyMHhtaibyzPItIA==", "id"=>"18"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:28:19 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/1" for ::1 at 2019-06-22 09:28:20 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FevXqLgj3mKpjYnEOBPie768EHvn2TbgUFRmySPQAPTfEpP6qMsKtNPLu8+vrRK36gcaFGWLI5DGtQ06kWgQ0g==", "id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:28:20 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/1" for ::1 at 2019-06-22 09:28:20 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xJSZc4fcyAQpJJms6pTfmYSM3Q4Gs161XkzxBhfNLooObd0hlzQc0lNiq6d9Ki9V0DfXYYThS8XIrZr1pXU+rA==", "id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:28:20 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/1" for ::1 at 2019-06-22 09:28:21 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AKpmfYBkffWO5L+tyVXciIdu/cbQfU2iA+iTa+Fn25rKUyIvkIypI/SijaZe6yxE09X3qVIvWNKVCfiYU9/LvA==", "id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:28:21 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/20" for ::1 at 2019-06-22 09:28:22 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZH7Tzn6uKLUw6qPm+ZMf0f+iD8bFrOVaxnEi61WAi/quh5ecbkb8Y0qske1uLe8dqxkFqUf+8CpQkEkY5zib3A==", "id"=>"20"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:28:22 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/articles/26" for ::1 at 2019-06-22 09:28:24 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TLJWnRAsOsry3v1SYVjBE4kZrdmwsxHKTe8XfHOPMf6GSxLPAMTuHIiYz1n25jHf3aKntjLhBLrbDnyPwTch2A==", "id"=>"26"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:28:25 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:28:58 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/sobueyuki/zisaku/type_proto/Type/app/views/articles/index.html.erb:8: syntax error, unexpected tLABEL
+...;@output_buffer.append=( class: :button link_to 'trush', "/a...
+...                         ^~~~~~):
+  
+app/views/articles/index.html.erb:8: syntax error, unexpected tLABEL
+Started GET "/" for ::1 at 2019-06-22 09:31:06 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/sobueyuki/zisaku/type_proto/Type/app/views/articles/index.html.erb:8: syntax error, unexpected keyword_class, expecting ')'
+...cle.id}", method: :delete class: "button");@output_buffer.sa...
+...                          ^~~~~):
+  
+app/views/articles/index.html.erb:8: syntax error, unexpected keyword_class, expecting ')'
+Started GET "/" for ::1 at 2019-06-22 09:32:15 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/1" for ::1 at 2019-06-22 09:32:16 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"52t0d1ZN2Y1QH9TYen6EPkHWZVhBhxaX8Y+haSCWNF8tkjAlRqUNWypZ5tPtwHTyFW1vN8PVA+dnbsqaki4keQ==", "id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:32:16 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/1" for ::1 at 2019-06-22 09:32:17 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Dm3t0U2+dVVPXeDlEbGVZDryAZM6ejTgrNZtx7ydfTjElKmDXVahgzUb0u6GD2WobkkL/LgoIZA6NwY0DiVtHg==", "id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:32:17 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/1" for ::1 at 2019-06-22 09:32:17 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Dwb8gar/6k6B8TZ7KsD3lifH2WCC9hZSyfAGqHw8/gLF/7jTuhc+mPu3BHC9fgdac3zTDwCkAyJfEW1bzoTuJA==", "id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:32:17 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/articles/1" for ::1 at 2019-06-22 09:32:17 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qYiVKedeujKrrp3eDEGa/xcVjdXJbIR7xHbbReh62LZjcdF797Zu5NHor9Wb/2ozQ66Huks+kQtSl7C2WsLIkA==", "id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:32:17 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/1" for ::1 at 2019-06-22 09:32:18 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dxhgik+VYa/Iqwsq5Atwfppxcqi5JhslJhZYKtN/BJq94STYX321ebLtOSFztYCyzsp4xzt0DlWw9zPZYccUvA==", "id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:32:18 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:37:54 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (55.1ms)
+Completed 200 OK in 79ms (Views: 26.6ms | ActiveRecord: 46.6ms)
+
+
+Started DELETE "/articles/1" for ::1 at 2019-06-22 09:37:58 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2B8K3Q+GUapjV8C31IoS95C4t2bLXjSbp95RscTj0d8S5k6PH26FfBkR8rxDNOI7xAO9CUkMIesxPzpCdlvB+Q==", "id"=>"1"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant ArticlesController::Artricle):
+  
+app/controllers/articles_controller.rb:21:in `destroy'
+Started GET "/articles/1" for ::1 at 2019-06-22 09:39:20 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 19.2ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/articles/" for ::1 at 2019-06-22 09:39:23 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/articles/1" for ::1 at 2019-06-22 09:39:25 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rlJJlcYjlvBa3Rd513myWo7WMoGiXlFdfid94D7eLxlkqw3H1stCJiCbJXJAx0KW2m047iAMRC3oxhYTjGY/Pw==", "id"=>"1"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[36mArticle Destroy (8.7ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 1[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:22
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:39:25 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/18" for ::1 at 2019-06-22 09:39:26 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1cq7UcFtEoXp3IZP6dFsWB5QcRtnUztaF5fMiWCu9RkfM/8D0YXGU5OatER+b5yUSut7dOUBLiqBdqd60hblPw==", "id"=>"18"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 18 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[36mArticle Destroy (0.7ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 18[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:22
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:39:26 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/articles/19" for ::1 at 2019-06-22 09:39:27 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yuvmHojccA9VgCZNW1tIdGAqIGlJKPUhmWrbB1qxAX0AEqJMmDSk2S/GFEbM5bi4NJEqBst64FEPi7D06AkRWw==", "id"=>"19"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 19 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[36mArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 19[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:22
+Redirected to http://localhost:3000/
+Completed 302 Found in 45ms (ActiveRecord: 40.7ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:39:27 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/20" for ::1 at 2019-06-22 09:39:27 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sD/LXspDRAASTpw82hd84TnvM36AX1NeZ64swiQpgz16xo8M2quQ1mgIrjdNqYwtbVQ5EQINRi7xT0cxlpGTGw==", "id"=>"20"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 20 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[36mArticle Destroy (41.0ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 20[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:22
+Redirected to http://localhost:3000/
+Completed 302 Found in 49ms (ActiveRecord: 43.9ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:39:27 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/21" for ::1 at 2019-06-22 09:39:28 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SLW+JJCFVXp476jQJwzKhrcsuTPD/memRfucPqCXJ2yCTPp2gG2BrAKpmtuwsjpK45ezXEGsctbTGvfNEi83Sg==", "id"=>"21"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 21[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:22
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:39:28 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 27ms (Views: 23.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/articles/22" for ::1 at 2019-06-22 09:39:28 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tN6+m+h6P6e3A22UjjHtTxZSriURlEwYvzsORAOrQaJ+J/rJ+JLrcc1FX58Zjx2DQumkSpPGWWgp2mW3sRNRhA==", "id"=>"22"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 22 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 22[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:22
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:39:28 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/23" for ::1 at 2019-06-22 09:39:29 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"l0iaLyGoNDbba+t7GSCUQTk1wcWGZPxgtbDvjgNXwqhdsd59MUDg4KEt2XCOnmSNbY7LqgQ26RAjUYR9se/Sjg==", "id"=>"23"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 23 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 23[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:22
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 40.6ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:39:29 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/articles/24" for ::1 at 2019-06-22 09:39:29 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jeqMYSECXR7Y12IcPLoGXnlGxzVk6n69LWSMP1b1eANHE8gzMeqJyKKRUBerBPaSLf3NWua4a827hefM5E1oJQ==", "id"=>"24"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 24 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 24[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:22
+Redirected to http://localhost:3000/
+Completed 302 Found in 46ms (ActiveRecord: 41.6ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:39:29 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/25" for ::1 at 2019-06-22 09:39:29 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zlJzogDywEeARxjwDKrfNPj2Dl8QewTf/hMzSL1/nZgEqzfwEBoUkfoBKvubFC/4rE0EMJIpEa9o8li7D8eNvg==", "id"=>"25"}
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 25 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[36mArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 25[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:22
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:39:29 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/26" for ::1 at 2019-06-22 09:39:31 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"A+7YUU9mCMG/NOIOMlOAsBkprzxwJFBrZ72b9LdBMODJF5wDX47cF8Vy0AWl7XB8TZKlU/J2RRvxXPAHBfkgxg==", "id"=>"26"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 26 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[36mArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 26[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:22
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:39:31 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:39:41 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:42:06 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 36ms (Views: 25.5ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/articles/27/edit" for ::1 at 2019-06-22 09:42:08 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"authenticity_token"=>"gfxN8OUBckT9dWVp+EPYDSJ8zErTJRHmCuN4kbIvmxBLBQmi9emmkoczV2Jv/SjBdsfGJVF3BJacAhNiAJeLNg==", "id"=>"27"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 27 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+Completed 406 Not Acceptable in 81ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionController::UnknownFormat (ArticlesController#edit is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/articles/27/edit" for ::1 at 2019-06-22 09:43:48 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 27 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (0.9ms)
+  Rendered articles/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles" for ::1 at 2019-06-22 09:44:03 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M62GlSUrHH1bviS6Gxxjaj4MmcZKrIjvZ3eniP6ohcP5VMLHNcPIqyH4FrGMopOmareTqcj+nZ/xlsx7TBCV5Q==", "title"=>"", "text"=>""}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `text`, `created_at`, `updated_at`) VALUES ('', '', '2019-06-22 00:44:03', '2019-06-22 00:44:03')[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:44:03 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:45:11 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:2
+  Rendered articles/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/27/edit" for ::1 at 2019-06-22 09:45:13 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"authenticity_token"=>"iMd0RcyeT9Kfe/0S77onXNKwKclYGSJi9XKd7VQIUN5CPjAX3HabBOU9zxl4BNeQhgsjptpLNxJjk/Ye5rBA+A==", "id"=>"27"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 27 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (0.4ms)
+  Rendered articles/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/27/edit" for ::1 at 2019-06-22 09:47:22 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 27 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (0.5ms)
+  Rendered articles/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 24ms (Views: 20.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/27/edit" for ::1 at 2019-06-22 09:47:31 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 27 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (0.4ms)
+  Rendered articles/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/27/edit" for ::1 at 2019-06-22 09:47:52 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 27 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (0.5ms)
+  Rendered articles/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 18.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/27/edit" for ::1 at 2019-06-22 09:51:46 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 27 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.0ms)
+  Rendered articles/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 77ms (Views: 22.4ms | ActiveRecord: 44.3ms)
+
+
+Started GET "/articles/27/edit" for ::1 at 2019-06-22 09:51:47 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 27 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (0.7ms)
+  Rendered articles/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for ::1 at 2019-06-22 09:51:50 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BzbnskZUzY9YeLPid8oc7p0HU+Vf+gMDPviGTy81kyLNz6PgVrwZWSI+gengdOwiybxZit2oFnOoGe28nY2DBA==", "title"=>"", "text"=>""}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `text`, `created_at`, `updated_at`) VALUES ('', '', '2019-06-22 00:51:50', '2019-06-22 00:51:50')[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:51:50 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/27/edit" for ::1 at 2019-06-22 09:51:52 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"authenticity_token"=>"nnKIONJTnBZaXgfqOoNa0jU8qahA8QvAyjV1iJFV0CRUi8xqwrtIwCAYNeGtPaoeYYejx8KjHrBc1B57I+3AAg==", "id"=>"27"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 27 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (0.6ms)
+  Rendered articles/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for ::1 at 2019-06-22 09:51:57 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mUQHFbHNgjasKBDwsxoi+E8MCzfEBsfzOrL5lJlJ8WxTvUNHoSVW4NZuIvskpNI0G7cBWEZU0oOsU5JnK/HhSg==", "title"=>"sdfghj", "text"=>"sdfgh"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `text`, `created_at`, `updated_at`) VALUES ('sdfghj', 'sdfgh', '2019-06-22 00:51:57', '2019-06-22 00:51:57')[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:51:57 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:53:50 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (52.9ms)
+Completed 200 OK in 74ms (Views: 24.7ms | ActiveRecord: 44.5ms)
+
+
+Started GET "/articles/30/edit" for ::1 at 2019-06-22 09:53:51 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"authenticity_token"=>"UB5bkXiOXU118hsJbH0aTMoz4CCR+ICUiVfvVb8W26ya5x/DaGaJmw+0KQL7w+qAnojqTxOqleQftoSmDa7Lig==", "id"=>"30"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 30 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (0.9ms)
+  Rendered articles/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 31ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for ::1 at 2019-06-22 09:53:53 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"thQcDQPx5HIHynKkwASzLf7MRX6JAk2vRQ/Kz6l+Cnl87VhfExkwpH2MQK9XukPhqndPEQtQWN/T7qE8G8YaXw==", "title"=>"", "text"=>""}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `text`, `created_at`, `updated_at`) VALUES ('', '', '2019-06-22 00:53:53', '2019-06-22 00:53:53')[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (42.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 302 Found in 47ms (ActiveRecord: 42.8ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:53:53 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:55:24 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:55:26 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/28/edit" for ::1 at 2019-06-22 09:55:27 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"authenticity_token"=>"D0QHcHXvJi52Pgw8L0DjMktw9eMDdkCpgaxybFTomjzFvUMiZQfy+Ax4Pje4/hP+H8v/jIEkVdkXTRmf5lCKGg==", "id"=>"28"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 28 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 09:59:26 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 09:59:28 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 09:59:28 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 09:59:29 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 09:59:30 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 09:59:30 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 09:59:31 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 09:59:31 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 09:59:31 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 09:59:32 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 09:59:53 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2019-06-22 09:59:56 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Je9WGeiETTpO4gZb2JXTFiybKob+Y/Zim1Fv86ipQKvvFhJL+GyZ7DSkNFBPKyPaeCAg6Xwx4xINsAQAGhFQjQ==", "title"=>"", "text"=>""}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `text`, `created_at`, `updated_at`) VALUES ('', '', '2019-06-22 00:59:56', '2019-06-22 00:59:56')[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 41.2ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 09:59:57 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/30" for ::1 at 2019-06-22 10:00:02 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6a2CS4ga3pIEtO9GnH6P8NUObPtr8ROQyEKZqXnVm84jVMYZmPIKRH7y3U0LwH88gbVmlOmjBuBeo/Jay22L6A==", "id"=>"30"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 30 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 30[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:26
+Redirected to http://localhost:3000/
+Completed 302 Found in 45ms (ActiveRecord: 41.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:00:02 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/29" for ::1 at 2019-06-22 10:00:03 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Ef+VJ48L//RbelD/6M8o3VURNQPFHfVOAwB8vrNPppbbBtF1n+MrIiE8YvR/cdgRAao/bEdP4D6V4RdNAfe2sA==", "id"=>"29"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 29 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 29[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:26
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 41.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:00:03 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/31" for ::1 at 2019-06-22 10:00:04 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RkQxp04ay+cQ6LJKtXZXn39tJjOX5EOjguKTviziXqyMvXX1XvIfMWqugEEiyKdTK9YsXBW2VtMUA/hNnlpOig==", "id"=>"31"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 31 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 31[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:26
+Redirected to http://localhost:3000/
+Completed 302 Found in 47ms (ActiveRecord: 41.1ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:00:04 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/27/edit" for ::1 at 2019-06-22 10:00:05 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"authenticity_token"=>"yaPMAySPYXAAN1m4tvjibtKMwtIkBJk+XwvDYxeJOk0DWohRNGe1pnpxa7MhRhKihjfIvaZWjE7J6qiQpTEqaw==", "id"=>"27"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 27 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (bad URI(is not URI?): /articles/@article[:id]):
+    1: <div class="form">
+    2:  <%= form_tag('/articles/@article[:id]', method: :patch) do %>
+    3: 　<textarea class ="title_form" cols="10" name="title" placeholder="title" rows="1"></textarea>
+    4:   <textarea class ="text_form" cols="30" name="text" placeholder="text" rows="10"></textarea>
+    5:   <input type="submit" value="submit" class="submit_button">
+  
+app/views/articles/edit.html.erb:2:in `_app_views_articles_edit_html_erb___4525760517124069413_70327094127500'
+Started GET "/articles/27/edit" for ::1 at 2019-06-22 10:00:51 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 27 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (bad URI(is not URI?): /articles/@article[:id]):
+    1: <div class="form">
+    2:  <%= form_tag('/articles/@article[:id]', method: :patch) do %>
+    3: 　<textarea class ="title_form" cols="10" name="title" placeholder="title" rows="1"></textarea>
+    4:   <textarea class ="text_form" cols="30" name="text" placeholder="text" rows="10"></textarea>
+    5:   <input type="submit" value="submit" class="submit_button">
+  
+app/views/articles/edit.html.erb:2:in `_app_views_articles_edit_html_erb___4525760517124069413_70327103514280'
+Started GET "/" for ::1 at 2019-06-22 10:01:00 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 10:01:02 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2019-06-22 10:01:04 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xqHsutldQDonMm6uzh6QIJa9v6Z3KsnCOIVoYTBD5QlvlF7ipKulHwzvME1SUSlC37/O5g52b849G7/169DyCw==", "title"=>"", "text"=>""}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `text`, `created_at`, `updated_at`) VALUES ('', '', '2019-06-22 01:01:04', '2019-06-22 01:01:04')[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (42.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 302 Found in 48ms (ActiveRecord: 43.3ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:01:04 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/27/edit" for ::1 at 2019-06-22 10:01:06 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"authenticity_token"=>"YxdKrXTVt/6pZ4M3933XFOSutieDpdkVvCM1x2S+dgqp7g7/ZD1jKNMhsTxgwyfYsBW8SAH3zGUqwl401gZmLA==", "id"=>"27"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 27 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (bad URI(is not URI?): /articles/@article[:id]):
+    1: <div class="form">
+    2:  <%= form_tag('/articles/@article[:id]', method: :patch) do %>
+    3: 　<textarea class ="title_form" cols="10" name="title" placeholder="title" rows="1"></textarea>
+    4:   <textarea class ="text_form" cols="30" name="text" placeholder="text" rows="10"></textarea>
+    5:   <input type="submit" value="submit" class="submit_button">
+  
+app/views/articles/edit.html.erb:2:in `_app_views_articles_edit_html_erb___4525760517124069413_70327094286620'
+Started DELETE "/articles/27" for ::1 at 2019-06-22 10:01:09 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YxdKrXTVt/6pZ4M3933XFOSutieDpdkVvCM1x2S+dgqp7g7/ZD1jKNMhsTxgwyfYsBW8SAH3zGUqwl401gZmLA==", "id"=>"27"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 27 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 27[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:26
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:01:09 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/28" for ::1 at 2019-06-22 10:01:10 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AirNR1dyYwDdfzjn7uJimULEr/kUnmQffcpbEorDM6/I04kVR5q31qc5Cux5XJJVFn+llpbMcW/rKzDhOHsjiQ==", "id"=>"28"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 28 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 28[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[35m (39.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:26
+Redirected to http://localhost:3000/
+Completed 302 Found in 43ms (ActiveRecord: 40.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:01:10 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/articles/32" for ::1 at 2019-06-22 10:01:11 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lqC4VXlyqu7m6SwZoXxjori1Y4W7thYMMBKj8nukektcWfwHaZp+OJyvHhI2wpNu7A5p6jnkA3ym88gByRxqbQ==", "id"=>"32"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 32 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 32[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:26
+Redirected to http://localhost:3000/
+Completed 302 Found in 43ms (ActiveRecord: 40.9ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:01:11 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/33/edit" for ::1 at 2019-06-22 10:01:12 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"authenticity_token"=>"drJYOWxLDoV018tjFoD7uWcDRIR3sHNPY6fvERzs9FW8SxxrfKPaUw6R+WiBPgt1M7hO6/XiZj/1RoTirlTkcw==", "id"=>"33"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 33 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (bad URI(is not URI?): /articles/@article[:id]):
+    1: <div class="form">
+    2:  <%= form_tag('/articles/@article[:id]', method: :patch) do %>
+    3: 　<textarea class ="title_form" cols="10" name="title" placeholder="title" rows="1"></textarea>
+    4:   <textarea class ="text_form" cols="30" name="text" placeholder="text" rows="10"></textarea>
+    5:   <input type="submit" value="submit" class="submit_button">
+  
+app/views/articles/edit.html.erb:2:in `_app_views_articles_edit_html_erb___4525760517124069413_70327062085040'
+Started GET "/articles/33/edit" for ::1 at 2019-06-22 10:01:17 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"authenticity_token"=>"drJYOWxLDoV018tjFoD7uWcDRIR3sHNPY6fvERzs9FW8SxxrfKPaUw6R+WiBPgt1M7hO6/XiZj/1RoTirlTkcw==", "id"=>"33"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 33 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (bad URI(is not URI?): /articles/@article[:id]):
+    1: <div class="form">
+    2:  <%= form_tag('/articles/@article[:id]', method: :patch) do %>
+    3: 　<textarea class ="title_form" cols="10" name="title" placeholder="title" rows="1"></textarea>
+    4:   <textarea class ="text_form" cols="30" name="text" placeholder="text" rows="10"></textarea>
+    5:   <input type="submit" value="submit" class="submit_button">
+  
+app/views/articles/edit.html.erb:2:in `_app_views_articles_edit_html_erb___4525760517124069413_70327062361520'
+Started GET "/" for ::1 at 2019-06-22 10:04:41 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/33/edit" for ::1 at 2019-06-22 10:04:43 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"authenticity_token"=>"eaEX+CeYurDplJ7ONOULQcOb+a+OJdV5jd/jyDN1RRezWFOqN3BuZpPSrMWjW/uNlyDzwAx3wAkbPog7gc1VMQ==", "id"=>"33"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 33 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/articles/33" for ::1 at 2019-06-22 10:04:45 +0900
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zsFwWKFPtJnCt06ucXlzRq8tETZbUGGVEoYEicCIUnIEODQKsadgT7jxfKXmx4OK+5YbWdkCdOWEZ296cjBCVA==", "title"=>"", "text"=>"", "id"=>"33"}
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 33 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:32
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:32
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:04:45 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 10:04:47 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2019-06-22 10:05:03 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+KhrI4qKSB+4Gp0XDHcwTVBidqLhXlFTLk0xhDXo+/ZRndl793ytOpPHw/SQOIkvGWAH4pgC918r0+YQ7nvs9A==", "title"=>"Sample Text", "text"=>"This is sample"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (1.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `text`, `created_at`, `updated_at`) VALUES ('Sample Text', 'This is sample', '2019-06-22 01:05:03', '2019-06-22 01:05:03')[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (43.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 302 Found in 50ms (ActiveRecord: 45.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:05:03 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/34/edit" for ::1 at 2019-06-22 10:05:05 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"authenticity_token"=>"xdxt4F7aDKIdFYMqJDufh31pAp3Hle63UElGO/pqcZ0PJSmyTjLYdGdTsSGzhW9LKdII8kXH+8fGqC3ISNJhuw==", "id"=>"34"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 34 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 19.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/articles/34" for ::1 at 2019-06-22 10:05:26 +0900
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nz1mgzkOdrq8wCLtzIM4afClOeOghFatzZh7/RgndHxVxCLRKeaibMaGEOZbPcilpB4zjCLWQ91beRAOqp9kWg==", "title"=>"Rewrite", "text"=>"this sample is re writed", "id"=>"34"}
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 34 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:32
+  [1m[36mArticle Update (3.5ms)[0m  [1m[33mUPDATE `articles` SET `title` = 'Rewrite', `text` = 'this sample is re writed', `updated_at` = '2019-06-22 01:05:26' WHERE `articles`.`id` = 34[0m
+  ↳ app/controllers/articles_controller.rb:32
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:32
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:05:26 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/34" for ::1 at 2019-06-22 10:05:29 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"slRSJRXBkR11Tl0ZEU5rQ41L2oq9S7IUNO1CJeFQHNt4rRZ3BSlFyw8IbxKG8JuP2fDQ5T8Zp2SiDCnWU+gM/Q==", "id"=>"34"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 34 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[36mArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 34[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[35m (41.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:26
+Redirected to http://localhost:3000/
+Completed 302 Found in 46ms (ActiveRecord: 42.2ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:05:29 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 10:05:31 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2019-06-22 10:05:53 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dGcmPLzDGm5tKfjlUGV+UWe9o/803vJyMMickxpWBpDdUpRkwTX/S0b0pgbMKsczLr/Sv02CVH41VksHwcURkg==", "title"=>"What is the most important things to do", "text"=>"Howjo"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `text`, `created_at`, `updated_at`) VALUES ('What is the most important things to do', 'Howjo', '2019-06-22 01:05:53', '2019-06-22 01:05:53')[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:05:53 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/35/edit" for ::1 at 2019-06-22 10:05:55 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"authenticity_token"=>"6XtQ9L8kQqGGqSE/2HhUjx/OCLXmaU4RXu94pbI2k0IjghSmr8yWd/zvEzRPxqRDS3UC2mQ7W2HIDhNWAI6DZA==", "id"=>"35"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 35 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/articles/35" for ::1 at 2019-06-22 10:05:57 +0900
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XD48ijDoK9DQtfgG4klr++v0CzyjiftDf4RtRk2oTUOWx3jYIAD/Bqrzyg1195s3v08BUyHb7jPpZQa1/xBdZQ==", "title"=>"", "text"=>"", "id"=>"35"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 35 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:32
+  [1m[36mArticle Update (0.2ms)[0m  [1m[33mUPDATE `articles` SET `title` = '', `text` = '', `updated_at` = '2019-06-22 01:05:57' WHERE `articles`.`id` = 35[0m
+  ↳ app/controllers/articles_controller.rb:32
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:32
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:05:57 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 10:10:30 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 92ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2019-06-22 10:10:47 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KRfoVN0xVfikrFPFwheSsD/ITcLSHFlWEQ2LOhjl0yGAIloMoMew3Y9xDSZeWCvSdso8gqtA/1oUk1yuw3bEIw==", "title"=>"good thing", "text"=>"Yeah Yeah"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (40.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `text`, `created_at`, `updated_at`) VALUES ('good thing', 'Yeah Yeah', '2019-06-22 01:10:47', '2019-06-22 01:10:47')[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 302 Found in 59ms (ActiveRecord: 41.2ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:10:48 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 63ms (Views: 59.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/36" for ::1 at 2019-06-22 10:10:50 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mArticle Load (2.8ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 36 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 40ms (Views: 29.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 10:11:29 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2019-06-22 10:11:51 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eQsK1NiE5mhtzjJRmOKDV/W6c0A9uhlEuqpScENvXZU0Z5zLpT2vIpqZiraLDNvFtSYjXmqTmkXdH7dGp6qdA==", "title"=>"Title", "text"=>"nyouadfhgo"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `text`, `created_at`, `updated_at`) VALUES ('Title', 'nyouadfhgo', '2019-06-22 01:11:51', '2019-06-22 01:11:51')[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 302 Found in 43ms (ActiveRecord: 40.4ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:11:51 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/37" for ::1 at 2019-06-22 10:11:55 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Wfa0938iz8KZHvvYa8RqfB3dL0WN0qy7e6+mgHZHzNCTD/Clb8obFONYydP8epqwSWYlKg+AucvtTs1zxP/c9g==", "id"=>"37"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 37 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 37[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[35m (39.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:26
+Redirected to http://localhost:3000/
+Completed 302 Found in 45ms (ActiveRecord: 40.5ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:11:55 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:13:34 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 51ms (Views: 48.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/36" for ::1 at 2019-06-22 10:14:16 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GYU8dWzBIxm04zksfbx8sT54c4+anMw8mICzA1h6d6nTfHgnfCn3z86lCyfqAox9asN54BjO2UwOYdjw6sJnjw==", "id"=>"36"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 36 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 36[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[35m (39.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:26
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 40.5ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:14:16 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/articles/33" for ::1 at 2019-06-22 10:14:17 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DdV+spRK+QHrRVTn98aiB0x5pbzQ7EPNIXCpJtnAyQ/HLDrghKIt15EDZuxgeFLLGMKv01K+Vr23kcLVa3jZKQ==", "id"=>"33"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 33 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 33[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[35m (39.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:26
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 40.4ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:14:17 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/35" for ::1 at 2019-06-22 10:14:18 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JbDDSxnckxmexVSfGyrsChPcTKnHSephLNcbI35neJTvSYcZCTRHz+SDZpSMlBzGR2dGxkUb/xG6NnDQzN9osg==", "id"=>"35"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 35 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:25
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[36mArticle Destroy (0.9ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 35[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:26
+Redirected to http://localhost:3000/
+Completed 302 Found in 47ms (ActiveRecord: 42.3ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:14:18 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 10:16:05 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2019-06-22 10:16:13 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IoE1lLZBrXjPOGWYtRK1F/iE0WAxcO+SGBQQxVAIkRWLtIfMy7dIXeTlO3spXQx1sYagIEgsSZ4disdRi5uGFw==", "title"=>"title", "text"=>"text"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (1.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `text`, `created_at`, `updated_at`) VALUES ('title', 'text', '2019-06-22 01:16:13', '2019-06-22 01:16:13')[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (38.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 40.3ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:16:14 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/38" for ::1 at 2019-06-22 10:16:17 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mArticle Load (4.6ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 38 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 38ms (Views: 24.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/articles/38/edit" for ::1 at 2019-06-22 10:16:21 +0900
+Processing by ArticlesController#edit as HTML
+  Parameters: {"authenticity_token"=>"lnVRD+XRBhn44r7GosFhCHSlg3t+5ytHjiVv09wdaDtcjBVd9TnSz4KkjM01f5HEIB6JFPy1PjcYxAQgbqV4HQ==", "id"=>"38"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 38 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:21
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/articles/38" for ::1 at 2019-06-22 10:16:29 +0900
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dHj+rwlkkoUDcQIDGGQNRRzeFTnEUSftndmBALFLCY6+gbr9GYxGU3k3MAiP2v2JSGUfVkYDMp0LOOrzA/MZqA==", "title"=>"rewrite", "text"=>"vvv", "id"=>"38"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 38 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:32
+  [1m[36mArticle Update (0.2ms)[0m  [1m[33mUPDATE `articles` SET `title` = 'rewrite', `text` = 'vvv', `updated_at` = '2019-06-22 01:16:29' WHERE `articles`.`id` = 38[0m
+  ↳ app/controllers/articles_controller.rb:32
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:32
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 40.9ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:16:29 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 19.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/38" for ::1 at 2019-06-22 10:16:33 +0900
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cteSoJxVIDnSHILK+6TLANTpI3nV2O71H1uojnb7E864LtbyjL3076hasMFsGjvMgFIpFleK+4WJusN9xEMD6A==", "id"=>"38"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 38 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[36mArticle Destroy (0.2ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 38[0m
+  ↳ app/controllers/articles_controller.rb:26
+  [1m[35m (39.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:26
+Redirected to http://localhost:3000/
+Completed 302 Found in 42ms (ActiveRecord: 39.8ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:16:33 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 10:16:40 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 10:17:31 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 10:17:32 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-06-22 10:17:33 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2019-06-22 10:17:55 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0ks56L/EjbZSKFpKZlV+FEgLK0gLvwGnDT1ppBPBDul7fouwwjJok3n1BKn6Gsd2AQlaCHLjp6sIo74wyFIZ6w==", "title"=>"this is what i want to do", "text"=>"Happy "}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `text`, `created_at`, `updated_at`) VALUES ('this is what i want to do', 'Happy ', '2019-06-22 01:17:55', '2019-06-22 01:17:55')[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (41.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 302 Found in 45ms (ActiveRecord: 41.7ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:17:55 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-06-22 10:19:27 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 0.3ms)
+
+
