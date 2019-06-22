@@ -6894,3 +6894,28 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 73ms (Views: 23.7ms | ActiveRecord: 44.3ms)
 
 
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sobueyuki/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (44.2ms)[0m  [1m[34mSELECT GET_LOCK('4816730049359725455', 0)[0m
+  ↳ /Users/sobueyuki/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/sobueyuki/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to AddUserIdToArticle (20190622014338)
+  [1m[35m (66.4ms)[0m  [1m[35mALTER TABLE `articles` ADD `user_id` int[0m
+  ↳ db/migrate/20190622014338_add_user_id_to_article.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sobueyuki/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190622014338')[0m
+  ↳ /Users/sobueyuki/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sobueyuki/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /Users/sobueyuki/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sobueyuki/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sobueyuki/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (42.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('4816730049359725455')[0m
+  ↳ /Users/sobueyuki/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/sobueyuki/.rbenv/versions/2.5.1/bin/rake:23
