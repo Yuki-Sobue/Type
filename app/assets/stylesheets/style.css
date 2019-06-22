@@ -107,6 +107,13 @@
   box-sizing: border-box;
 }
 
+.pagination{
+ width:200px; 
+ margin: 0% auto;
+ padding-top: 20px;
+}
+
+
 
 
 /* ここからがボタンのアクションの記述になります */
