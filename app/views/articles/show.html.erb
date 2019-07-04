@@ -1,4 +1,7 @@
 <div class="text_detail">
-<h1><%=@article.title %></h1>
-<p><%=@article.text%></p>
+  <%=link_to 'return', "/articles", method: :get ,class: "button"%>
+  <h1><%=@article.title %>
+  </h1>
+  <p><%=simple_format(@article.text)%>
+  </p>
 </div>

@@ -1,7 +1,9 @@
 <div class="form">
- <%= form_tag('/articles', method: :post) do %>
-　<textarea class ="title_form" cols="10" name="title" placeholder="title" rows="1"></textarea>
-  <textarea class ="text_form" cols="30" name="text" placeholder="text" rows="10"></textarea>
-  <input type="submit" value="submit" class="submit_button">
- <%end%> 
+  <%= form_for(:session, url: articles_path, method: :post) do |f| %>
+      <%= f.text_field :title, class: 'title_form',name: "title", size:10,placeholder: "Title"%>
+      <%= f.text_area :text, class: 'text_form' ,name: "text" , size: "30×10",placeholder: "Text"%>
+      <%= f.submit "submit", class: "submit_button" %>
+  <% end %>
 </div>
+
+ 

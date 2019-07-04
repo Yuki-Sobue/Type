@@ -14,9 +14,14 @@
     <header class="main_header">
      <h1 class="title">Type writer</h1> 
      <div class="buttons">
-       <a class = "button" href="">Signin</a>
-       <a class = "button" href="/articles/new">Write</a>
-       <a class = "button" href="">Signout</a>
+       <%unless user_signed_in?%>
+         <%= link_to 'Signin', '/users/sign_in', class: 'button' %>
+       <%end%>
+       <%if user_signed_in?%>
+         <a class = "button" href="/articles/new">Write</a>
+         <%= link_to 'Signout', '/users/sign_out', method: :delete, class:'button'%>
+
+       <%end%>
      </div>
     </header>
   <div class="main">
@@ -26,9 +31,6 @@
 
     <div class="main">
   </div>
-
-
- <!-- fotterは趣味のキーボードを作っているだけだ。面倒臭いぞ！ -->
 
 <div class="main_footer">
  <ul class = "key_list">
