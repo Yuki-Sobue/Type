@@ -1,1 +1,9 @@
-<%=render partial: "form.html.erb"%>
+<div class="form">
+  <%= form_for(:session, url: articles_path, method: :post) do |f| %>
+      <%= f.text_field :title, class: 'title_form',name: "title", size:10,placeholder: "Title"%>
+      <%= f.text_area :text, class: 'text_form' ,name: "text" , size: "30×10",placeholder: "Text"%>
+      <%= f.submit "submit", class: "submit_button" %>
+  <% end %>
+</div>
+
+ 
